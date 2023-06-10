@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #ddd;
+        font-family: sans-serif;
+      }
+      .result-sumry {
+        width: 550px;
+        height: 400px;
+        border-radius: 25px;
+        display: grid;
+        margin: auto;
+        margin-top: 90px;
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .res1 {
+        padding: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-radius: 25px;
+        text-align: center;
+        background-color: #6441fd;
+        width: 50%;
+      }
+      .res1 h3 {
+        color: #c9bdff;
+        margin-bottom: 15px;
+      }
+      .res1 h2 {
+        color: #fdfcff;
+        margin-bottom: 15px;
+      }
+
+      .res1 .cir-res {
+        border-radius: 50%;
+        /* padding: 50px; */
+        padding-top: 50px;
+        background: #462ad8;
+        width: 150px;
+        height: 150px;
+        margin: auto;
+        display: grid;
+        color: #8476ff;
+      }
+      .res1 .num-res {
+        font-weight: 800;
+        color: #fdfffb;
+        font-size: 50px;
+      }
+      .res1 p {
+        color: #a8a4ff;
+      }
+      .res2 {
+        padding: 25px;
+        border-top-right-radius: 25px;
+        width: 50%;
+        border-bottom-right-radius: 25px;
+      }
+      .res2 h3 {
+        margin-bottom: 15px;
+      }
+      .res2 .co-item {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        border-radius: 8px;
+        padding: 8px;
+        align-items: center;
+        height: 40px;
+        margin-bottom: 20px;
+        display: block;
+        position: relative;
+      }
+      .res2 .co-item span {
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        color: #000;
+        padding-top: 8px;
+      }
+      .res2 .co-item span .p{
+        color: #c7abab;
+      }
+      .res2 .co-item img {
+        /* margin-right: 5px; */
+      }
+      .clr-light-1{
+        background: #fff6f5;
+        color: #fe7e7e;
+      }
+      .clr-light-2{
+        background: #fffbf2; color: #ffb52a;
+      }
+      .clr-light-3{
+        background: #f2fbfa; color: #0dbe95;
+      }
+      .clr-light-4{
+        background: #f3f3fd; color: #374ddc;
+      }
+
+      .res2 button {
+        width: 90%;
+        height: 40px;
+        margin: auto;
+        display: grid;
+        align-items: center;
+        border-radius: 30px;
+        background: #5139f5;
+        border: none;
+        color: #dbd3ff;font-size: 18px;
+      }
+
+
+      @media only screen and (max-width: 450px){
+        .result-sumry{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          margin-top: 0;
+          border-radius: 0;
+        }
+        .res1{
+          width: 100%;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+        .res2{
+          width: 100%;
+          height: 100%;
+        }
+        body{
+          background: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result-sumry">
+      <div class="res1">
+        <h3>Your Result</h3>
+
+        <div class="cir-res">
+          <span class="num-res">76</span>
+
+          of 100
+        </div>
+
+        <h2 style="margin-top: 25px">Great</h2>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="res2">
+        <h3>Summary</h3>
+
+        <div class="co-item clr-light-1">
+          <img src="./assets/images/icon-reaction.svg" alt="" />
+          Reaction
+          <span> 80 <b class="p">/ 100</b></span>
+        </div>
+        <div class="co-item clr-light-2">
+          <img src="./assets/images/icon-memory.svg" alt="" />
+         Memory 
+         <span> 92 <b class="p">/ 100</b></span>
+        </div>
+        <div class="co-item clr-light-3">
+          <img src="./assets/images/icon-verbal.svg" alt="" />
+          Verbal
+          <span> 61 <b class="p">/ 100</b></span>
+        </div>
+        <div class="co-item clr-light-4">
+          <img src="./assets/images/icon-visual.svg" alt="" />
+          Visual 
+          <span>72 <b class="p">/ 100</b></span>
+        </div>
+
+        <button>Continue</button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Amit Kushwaha</a>.
+    </div>
+  </body>
+</html>
